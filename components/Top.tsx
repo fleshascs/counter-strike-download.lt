@@ -1,13 +1,12 @@
 import Image from '../components/Image';
 import { FC, ReactNode } from 'react';
-import { Totals } from './types';
 import DownloadButtons from './DownloadButtons';
 
-interface TopProps extends Totals {
+interface TopProps {
   title?: string | ReactNode;
 }
 
-const Top: FC<TopProps> = ({ servers, players, maxPlayers, percentage, title }) => {
+const Top: FC<TopProps> = ({ title }) => {
   return (
     <div className='py-5 sm:py-16 relative flex flex-col lg:flex-row text-sm text-gray-400'>
       <div>

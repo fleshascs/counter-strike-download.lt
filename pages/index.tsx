@@ -5,18 +5,13 @@ import { useFetchServers } from '../components/utils';
 import Top from '../components/Top';
 import Card from '../components/Card';
 import HomePage from '../components/HomePage';
+import NavBar from '../components/NavBar';
 
 export default function Home() {
-  const { isLoading, error, servers, total } = useFetchServers();
   return (
     <>
-      <Top
-        servers={total.servers}
-        players={total.players}
-        maxPlayers={total.maxPlayers}
-        percentage={total.percentage}
-      />
-
+      <Top />
+      <NavBar />
       <div className='flex flex-col lg:flex-row lg:space-x-4 pb-24'>
         <div className='basis-1/3 pt-10 lg:pt-0'>
           <Sidebar />
